@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -71,6 +71,33 @@ p {
     margin: 0 auto;
 }
 
+header {
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+	align-items: flex-end;
+}
+
+.logo-container {
+	width: 16%;
+}
+
+.nav-header {
+	display: flex;
+	justify-content: space-evenly;
+	flex-grow: 100;
+	font-size: 14px;
+	font-weight: 200;
+	align-items: flex-end;
+}
+
+.nav-item {
+	align-self: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Roboto", sans-serif;
+}
+
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -79,10 +106,30 @@ p {
     border-bottom: 1px dashed black;
 }
 
+.jumbotron {
+	padding: 24px;
+	animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
+}
+
+.text-container.text-about {
+	width: 100%;
+	padding: 20px;
 }
 
 .middle-content {
@@ -90,9 +137,43 @@ p {
     border-bottom: 1px dashed black;
 }
 
+.middle-content-about {
+    margin-bottom: 20px;
+}
+
 .middle-content h2 {
     padding: 0 2%;
     margin-bottom: 0;
+}
+
+.about-middle {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	flex-direction: row;
+	align-items: center;
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	border-bottom: 1px dashed black;
+	margin-top: 24px;
+}
+
+.about-txt {
+	width: 100%;
+	margin-top: 12px;
+	margin-bottom: 40px;
+}
+
+.learn-more-btn {
+	text-decoration: none;
+	border: 2px solid #000;
+	border-radius: 10px;
+	padding: 12px 32px;
+	color: black;
 }
 
 .middle-content .boxes {
@@ -104,12 +185,51 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.box:nth-child(1) {
+	background: #008080;
+}
+
+.box:nth-child(2) {
+	background: #ffd700;
+}
+
+.box:nth-child(3) {
+	background: #5f9ea0;
+}
+
+.box:nth-child(4) {
+	background: #ff7f50;
+}
+
+.box:nth-child(5) {
+	background: #dc143c;
+}
+
+.box:nth-child(6) {
+	background: #228b22;
+}
+
+.box:nth-child(7) {
+	background: #9932cc;
+}
+
+.box:nth-child(8) {
+	background: #ff69b4;
+}
+
+.box:nth-child(9) {
+	background: #4b0082;
+}
+
+.box:nth-child(10) {
+	background: #1e90ff;
 }
 
 .bottom-content {
